@@ -1,0 +1,76 @@
+{
+  "name": "specat-cloud",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --mode production --target app",
+    "build:no-clean": "vue-cli-service build --mode production --no-clean --target app --dashboard",
+    "deploy": "git pull origin master && npm install && npm run build:no-clean",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue-core-video-player": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.8",
+    "@vue/cli-plugin-babel": "^4.5.0",
+    "@vue/cli-plugin-eslint": "^4.5.0",
+    "@vue/cli-plugin-router": "^4.5.0",
+    "@vue/cli-plugin-unit-jest": "^4.5.0",
+    "@vue/cli-plugin-vuex": "^4.5.0",
+    "@vue/cli-service": "^4.5.0",
+    "axios": "^0.26.1",
+    "clipboard": "^2.0.10",
+    "codemirror": "^5.65.3",
+    "element-ui": "^2.15.6",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "svg-sprite-loader": "^5.2.1",
+    "file-saver": "^2.0.5",
+    "node-sass": "^5.0.0",
+    "nprogress": "^0.2.0",
+    "sass-loader": "^10.1.1",
+    "sass-resources-loader": "^2.1.1",
+    "vue": "^2.6.11",
+    "vue-codemirror": "^4.0.6",
+    "vue-drag-resize": "^1.5.4",
+    "vue-i18n": "^8.22.2",
+    "vue-router": "^3.2.0",
+    "vue-template-compiler": "^2.6.14",
+    "vuex": "^3.4.0",
+    "webpackbar": "^5.0.0-3"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {},
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/*.{j,t}s?(x)",
+          "**/tests/unit/**/*.spec.{j,t}s?(x)"
+        ],
+        "env": {
+          "jest": true
+        }
+      }
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
